@@ -1,0 +1,23 @@
+{% extends 'home.html' %} {% block content %}
+<table class="table table-dark">
+  <thead>
+    <tr>
+      <th scope="col">ID's</th>
+      <th scope="col">Books</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for book in books %}
+    <tr>
+      <th scope="row">{{book.id}}</th>
+      <td>
+        <a style="color: inherit;" href="{% url 'book' book.id %}"
+          >{{book.name}}</a
+        >
+      </td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock %}

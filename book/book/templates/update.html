@@ -1,0 +1,18 @@
+{% extends 'home.html' %} {% block content %}
+<form action="update" method="POST">
+    {% csrf_token %}
+
+  <div   class="form-group"  >
+    <label for="exampleInputEmail1">ID</label>
+    <input
+      type="number"
+      class="form-control"
+      name="id"
+    />
+  <div class="form-group">
+    <label for="exampleInputPassword1">Book Name</label>
+    <input type="text" class="form-control" name="bookName"/>
+  </div>
+  <button type="submit" class="btn btn-danger">Submit</button>
+</form>
+{% endblock %}
